@@ -1,0 +1,37 @@
+{
+    "capabilities":
+        [
+          {
+            "browserName": "iPhone 7",
+            "version":"12.2",
+            "maxInstances": 1,
+            "platform":"IOS",
+            "udid" :"77ef4eb73b572f723083b1a88a46ec2347e2def8",
+            "platformName": "iOS",
+            "deviceName": "iPhone 7",
+            "platformVersion": "12.2",
+            "automationName" : "XCUITest",
+            "xcodeOrgId": "UTURYJS693",
+            "xcodeSigningId": "iPhone Developer",
+            "updatedWDABundleId": "com.xevo.WebDriverAgentRunner",
+            "usePrebuiltWDA": false,
+            "fullReset": false,
+            "noReset": true
+          }
+        ],
+    "configuration":
+    {
+      "cleanUpCycle":2000,
+      "timeout":30000,
+      "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+      "url":"http://artemis:4002/wd/hub",
+      "host": "artemis",
+      "port": 4002,
+      "maxSession": 1,
+      "register": true,
+      "registerCycle": 5000,
+      "hubPort": 4444,
+      "hubHost": "artemis",
+      "hubProtocol": "http"
+    }
+  }

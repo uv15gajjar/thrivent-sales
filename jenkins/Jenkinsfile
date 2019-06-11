@@ -1,0 +1,27 @@
+pipeline{
+    agent any
+    tools{
+            maven "Maven"
+        }
+
+    parameters {
+            choice(name: "device", description: "Select Device to run automation on artemis", choices: ['LGV40ThinQ' ,'Nexus6P', 'Pixel2XL_Emu'])
+        }
+    stages{
+        stage('Run Android Test'){
+            steps{
+                script{
+                    String args = "configs/"
+                    args +="${params.device}.json"
+                    sh "mvn package"
+                }
+            }
+            post {
+                always {
+                    junit 'reports/cucumber-results.xml'
+                }
+            }
+        }
+    }
+
+}
